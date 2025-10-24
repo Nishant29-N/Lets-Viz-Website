@@ -1,0 +1,598 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  /* Let's Viz Inspired Palette */
+  --lv-blue: #00b8f0;
+  --lv-dark: #0a0a1a;
+  --lv-darkblue: #070749;
+  --lv-light: #ffffff;
+  --lv-gray: #f7f8fc;
+  --lv-text: #1a1a1a;
+  --lv-hover: #0078a0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ---------- DARK MODE THEME ---------- */
+body.dark-mode {
+  background: var(--lv-dark);
+  color: var(--lv-light);
+}
+
+body.dark-mode header {
+  background: var(--lv-dark);
+}
+
+body.dark-mode .navbar {
+  background: var(--lv-dark);
+}
+
+body.dark-mode .menu li a {
+  color: var(--lv-light);
+}
+
+body.dark-mode .dropdown-menu {
+  background: var(--lv-darkblue);
+}
+
+body.dark-mode .dropdown-menu li a {
+  color: var(--lv-light);
+}
+
+body.dark-mode .dropdown-menu li a:hover {
+  background: var(--lv-blue);
+}
+
+body.dark-mode .contact-btn {
+  background: var(--lv-blue);
+  color: var(--lv-light);
+}
+
+body.dark-mode .contact-btn:hover {
+  background: var(--lv-hover);
+}
+
+body.dark-mode .hero-content h2,
+body.dark-mode .hero-content p {
+  color: var(--lv-light);
+}
+
+
+/* ---------- THEME TOGGLE ---------- */
+.theme-toggle {
+  position: relative;
+  width: 28px;
+  /* fixed width to prevent layout shift */
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--lv-blue);
+  scale: 1.1;
+
+}
+
+
+.theme-toggle .fa-sun {
+  display: none;
+  color: var(--lv-blue);
+}
+
+body.dark-mode .theme-toggle .fa-moon {
+  display: none;
+}
+
+body.dark-mode .theme-toggle .fa-sun {
+  display: inline;
+}
+
+/* When dark mode is active */
+body.dark-mode .logo-light {
+  display: none;
+}
+
+body.dark-mode .logo-dark {
+  display: inline;
+}
+
+body.dark-mode .logo-light {
+  opacity: 0;
+}
+
+body.dark-mode .logo-dark {
+  opacity: 1;
+}
+
+
+
+header {
+  width: 100%;
+  background: var(--lv-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  transition: all 0.4s ease;
+  background: var(--lv-light);
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ---------- LOGO SWITCH ---------- */
+.logo img {
+  width: 150px;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.logo-dark {
+  display: none;
+}
+
+
+/* Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu li {
+  position: relative;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--lv-text);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: var(--lv-blue);
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 45px;
+  left: 0;
+  background: var(--lv-light);
+  list-style: none;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: var(--lv-text);
+}
+
+.dropdown-menu li {
+  width: 100%;
+  color: var(--lv-blue);
+}
+
+.dropdown-menu li:hover {
+  color: var(--lv-light);
+  background: var(--lv-blue);
+}
+
+.dropdown-menu li a:hover {
+  color: var(--lv-light);
+}
+
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-links:hover {
+  transition: all 0.5s ease;
+  scale: 1.04;
+}
+
+/* Contact Button */
+.contact-btn {
+  background: var(--lv-darkblue);
+  color: var(--lv-light);
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: var(--lv-hover);
+  box-shadow: 1px 3px 10px var(--lv-hover);
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--lv-text);
+}
+
+.menu-toggle .fa-xmark {
+  display: none;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100vh;
+}
+
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  /* was 100vh */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--lv-light);
+}
+
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.4);
+  transition: all 0.6s ease;
+}
+
+.hero-content {
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--lv-light);
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #e5e5e5;
+}
+
+
+.hero-section:hover .hero-bg {
+  transform: scale(1.05);
+  filter: brightness(0.5);
+}
+
+.hero-section button {
+  background: var(--lv-blue);
+  z-index: 2;
+  cursor: pointer;
+  margin: 20px;
+  font-weight: 600;
+  color: var(--lv-light);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+}
+
+.hero-section button a {
+  text-decoration: none;
+  color: var(--lv-light);
+}
+
+.hero-section button:hover {
+  background: var(--lv-hover);
+  border: 0.2px solid var(--lv-light);
+  color: var(--lv-light);
+  scale: 1.02;
+}
+
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  gap: 40px;
+}
+
+.about-right {
+
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.about-right img {
+  border-radius: 20px;
+  background-size: cover;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Medium screen fix (tablets and small laptops) */
+@media (max-width: 1063px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .menu li {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .contact-sm {
+    display: block !important;
+  }
+
+  /* Keep dropdown hidden initially */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height 0.4s ease;
+  }
+
+  /* Slide open on click */
+  .dropdown.open .dropdown-menu {
+    max-height: 400px; /* enough space for menu items */
+  }
+
+  .dropdown-menu li a {
+    padding: 10px 0;
+  }
+
+  .dropdown-menu li:hover {
+    background: none;
+    color: var(--lv-blue);
+  }
+
+}
+
+/* Full mobile navigation (phones) */
+@media (max-width: 768px) {
+  .navbar {
+    /* padding: 8px 15px; */
+    justify-content: space-evenly;
+  }
+
+  /* ✅ Mobile dropdown animation fix */
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height 0.4s ease;
+  }
+
+  .dropdown.open .dropdown-menu {
+    max-height: 400px;
+  }
+
+  .dropdown-menu li a {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .dropdown-menu li:hover {
+    background: none;
+    color: var(--lv-blue);
+  }
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: var(--lv-light);
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 0;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .menu.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active .fa-bars-staggered {
+    display: none;
+  }
+
+  .menu-toggle.active .fa-xmark {
+    display: inline;
+  }
+
+  .contact-sm {
+    display: block !important;
+  }
+
+  .theme-toggle {
+    display: none;
+  }
+
+}
+
+
+/* ----------- FADE-IN ANIMATIONS ---------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation Classes (Add these to HTML elements as needed) */
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.fade-in-scale {
+  opacity: 0;
+  animation: fadeInScale 1s ease forwards;
+}
+
+/* Optional: Add a delay for staggered reveals */
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.delay-3 {
+  animation-delay: 0.9s;
+}
+
