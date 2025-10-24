@@ -120,7 +120,6 @@ body.dark-mode .logo-dark {
 }
 
 
-
 header {
   width: 100%;
   background: var(--lv-dark);
@@ -254,7 +253,7 @@ header {
   box-shadow: 1px 3px 10px var(--lv-hover);
 }
 
-/* Hamburger */
+
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -351,10 +350,10 @@ header {
 .about-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
   width: 100%;
-  min-height: 400px;
-  padding: 60px 8%;
+  min-height: 300px;
+  padding: 20px 10%;
   gap: 40px;
 
 }
@@ -365,8 +364,8 @@ header {
 }
 
 .about-left h2 {
-  font-size: 2.5rem;
-  line-height: 1.3;
+  font-size: 2.8rem;
+  line-height: 1.1;
   margin-bottom: 15px;
 }
 
@@ -464,7 +463,7 @@ header {
   }
 
   .navbar {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-evenly;
   }
 
@@ -598,8 +597,8 @@ header {
   }
 
   .navbar {
-
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: center;
   }
 
 
