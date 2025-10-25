@@ -1,165 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/x-icon" href="Images/favicon.png" />
-    <title>Let's Viz | AI Automation Agency</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="Images/favicon.png" />
+  <title>Let's Viz | AI Automation Agency</title>
 
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/bc94aa2890.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <!-- Header Section -->
-    <header id="home">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <ul>
-          <!-- Logo -->
-          <li class="logo">
-            <a href="#home">
-              <!-- Light Logo -->
-              <img
-                src="Images/Logo-Black-PNG.png"
-                alt="Let's Viz Logo"
-                class="logo-light"
-              />
-              <!-- Dark Logo -->
-              <img
-                src="Images/Logo-White-PNG.png"
-                alt="Let's Viz Logo"
-                class="logo-dark"
-              />
-            </a>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bc94aa2890.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header id="home">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <!-- Logo -->
+        <li class="logo">
+          <a href="#home">
+            <!-- Light Logo -->
+            <img src="Images/Logo-Black-PNG.png" alt="Let's Viz Logo" class="logo-light" />
+            <!-- Dark Logo -->
+            <img src="Images/Logo-White-PNG.png" alt="Let's Viz Logo" class="logo-dark" />
+          </a>
+        </li>
+
+        <!-- Menu -->
+        <div class="menu">
+          <li class="nav-links"><a href="#home">Home</a></li>
+
+          <!-- Dropdown 1 -->
+          <li class="dropdown nav-links">
+            <a href="#">Services <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Custom Dashboards</a></li>
+              <li><a href="#">BI Consulting</a></li>
+              <li><a href="#">AI Consulting</a></li>
+              <li><a href="#">IT Outsourcing</a></li>
+              <li><a href="#">Buy Cloud Servers</a></li>
+              <li><a href="#">Sign-Up for ZOHO</a></li>
+            </ul>
           </li>
 
-          <!-- Menu -->
-          <div class="menu">
-            <li class="nav-links"><a href="#home">Home</a></li>
-
-            <!-- Dropdown 1 -->
-            <li class="dropdown nav-links">
-              <a href="#">Services <span class="arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Custom Dashboards</a></li>
-                <li><a href="#">BI Consulting</a></li>
-                <li><a href="#">AI Consulting</a></li>
-                <li><a href="#">IT Outsourcing</a></li>
-                <li><a href="#">Buy Cloud Servers</a></li>
-                <li><a href="#">Sign-Up for ZOHO</a></li>
-              </ul>
-            </li>
-
-            <!-- Dropdown 2 -->
-            <li class="dropdown nav-links">
-              <a href="#">By Department <span class="arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Marketing</a></li>
-                <li><a href="#">Finance</a></li>
-                <li><a href="#">Sales</a></li>
-                <li><a href="#">SEO</a></li>
-                <li><a href="#">Management</a></li>
-              </ul>
-            </li>
-
-            <!-- Dropdown 3 -->
-            <li class="dropdown nav-links">
-              <a href="#">By Industry <span class="arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Logistics</a></li>
-                <li><a href="#">Shipping</a></li>
-              </ul>
-            </li>
-
-            <!-- Dropdown 4 -->
-            <li class="dropdown nav-links">
-              <a href="#">Blog <span class="arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">All</a></li>
-                <li><a href="#">AI Automation</a></li>
-                <li><a href="#">DAX</a></li>
-                <li><a href="#">Looker Studio</a></li>
-                <li><a href="#">Power BI</a></li>
-                <li><a href="#">SQL</a></li>
-                <li><a href="#">Tableau</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown nav-links">
-              <a href="#">About<span class="arrow">▼</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Careers</a></li>
-              </ul>
-            </li>
-            <li class="contact-sm"><a href="#">Get in Touch</a></li>
-          </div>
-
-          <!-- Contact Button -->
-          <li><a href="#" class="contact-btn">Get in Touch</a></li>
-
-          <!-- Theme Toggle -->
-          <li class="theme-toggle">
-            <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-sun"></i>
+          <!-- Dropdown 2 -->
+          <li class="dropdown nav-links">
+            <a href="#">By Department <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Finance</a></li>
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">SEO</a></li>
+              <li><a href="#">Management</a></li>
+            </ul>
           </li>
 
-          <!-- Hamburger -->
-          <div class="menu-toggle">
-            <i class="fa-solid fa-bars-staggered"></i>
-            <i class="fa-solid fa-xmark"></i>
-          </div>
-        </ul>
-      </nav>
+          <!-- Dropdown 3 -->
+          <li class="dropdown nav-links">
+            <a href="#">By Industry <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Logistics</a></li>
+              <li><a href="#">Shipping</a></li>
+            </ul>
+          </li>
 
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <img class="hero-bg" src="Images/bg.webp" alt="AI Automation" />
+          <!-- Dropdown 4 -->
+          <li class="dropdown nav-links">
+            <a href="#">Blog <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">All</a></li>
+              <li><a href="#">AI Automation</a></li>
+              <li><a href="#">DAX</a></li>
+              <li><a href="#">Looker Studio</a></li>
+              <li><a href="#">Power BI</a></li>
+              <li><a href="#">SQL</a></li>
+              <li><a href="#">Tableau</a></li>
+            </ul>
+          </li>
 
-        <div class="hero-content fade-in-up">
-          <h2>AI Solutions Tailored for You</h2>
-          <p>
-            Save 10-20 hours every week & boost revenue by 10%+ with automation
-            & data-driven dashboards.
-          </p>
+          <li class="dropdown nav-links">
+            <a href="#">About<span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </li>
+          <li class="contact-sm"><a href="#">Get in Touch</a></li>
         </div>
 
-        <button class="fade-in-up">
-          <a href="#">
-            Get Free Consultation
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </button>
-      </section>
-    </header>
+        <!-- Contact Button -->
+        <li><a href="#" class="contact-btn">Get in Touch</a></li>
 
-    <!-- About Section -->
-    <main class="about-section">
-      <div class="about-left">
-        <h2>
-          Smarter Decisions,<br />
-          Faster Growth
-        </h2>
+        <!-- Theme Toggle -->
+        <li class="theme-toggle">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </li>
+
+        <!-- Hamburger -->
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars-staggered"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <img class="hero-bg" src="Images/bg.webp" alt="AI Automation" />
+
+      <div class="hero-content fade-in-up">
+        <h2>AI Solutions Tailored for You</h2>
         <p>
-          Save 10–20 hours every week & boost revenue by 10%+ <br />
-          with automation & data-driven dashboards.
+          Save 10-20 hours every week & boost revenue by 10%+ with automation
+          & data-driven dashboards.
         </p>
       </div>
 
-      <div class="about-right">
-        <img src="Images/ai-growth-image.png" alt="AI Growth" />
-      </div>
-    </main>
+      <button class="hero-btn fade-in-up">
+        <a href="#">
+          Get Free Consultation
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </button>
+    </section>
+  </header>
 
-    <!-- JS -->
-    <script src="main.js"></script>
-  </body>
+  <!-- About Section -->
+  <main class="about-section">
+    <div class="about-left">
+      <h2 class=" fade-in-up">
+        Smarter Decisions,<br />
+        Faster Growth
+      </h2>
+      <p>
+        Save 10–20 hours every week & boost revenue by 10%+ <br />
+        with automation & data-driven dashboards.
+      </p>
+    </div>
+
+    <div class="about-right  fade-in-up">
+      <img src="Images/ai-growth-image.png" alt="AI Growth" />
+    </div>
+  </main>
+
+
+  <!-- Why Automation Matters Section -->
+  <main class="section-3">
+    <img src="Images/AI-Automation-1.webp" alt="" class="section-3-img">
+    <h1>Why AI Automation Matters?</h1>
+    <div class="section-3-main">
+      <div class="section-3-left">
+        <img src="Images/why automation matters.png" class="" alt="AI Growth" />
+      </div>
+      <div class="section-3-right">
+        <p>
+          Businesses today lose countless hours every week on repetitive, low-value tasks. From manual reporting to
+          customer
+          support queries, valuable time is wasted that could instead drive growth and innovation.
+          <br><br>
+          At Lets Viz Technologies, we empower businesses with Al-driven automation – seamlessly integrating intelligent
+          workflows and custom Al agents using tools like Zapier, Make, nBn, Power Automate, and tailored Al solutions.
+        </p>
+        <div class="list-div">
+          <ol class="list">
+            <li><i class="fa-solid fa-circle-check"></i>Cut down repetitive tasks</li>
+            <li><i class="fa-solid fa-circle-check"></i>Improve decision-making with real-time data</li>
+            <li><i class="fa-solid fa-circle-check"></i>Scale without increasing headcount</li>
+            <li><i class="fa-solid fa-circle-check"></i>Deliver better customer experiences</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Automation Processes Comparison Section -->
+  <section class="comparison-section">
+    <div class="comparison-container">
+      <h2>Manual Processes vs. AI Powered Business</h2>
+
+      <div class="comparison-columns">
+        <!-- Left Column -->
+        <div class="comparison-col">
+          <h3>Traditional Manual Approach</h3>
+
+          <div class="comparison-item">
+            <i class="fa-regular fa-clock icon"></i>
+            <div>
+              <h4>Wasted time</h4>
+              <p>Teams spend countless hours on repetitive reporting, invoicing, and manual data entry, slowing overall
+                growth.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-folder-open icon"></i>
+            <div>
+              <h4>Scattered data</h4>
+              <p>Information spread across spreadsheets and CRMs makes tracking, analysis, and collaboration
+                inefficient.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-file-invoice-dollar icon"></i>
+            <div>
+              <h4>High costs</h4>
+              <p>Maintaining large support teams for repetitive, low-value tasks increases costs without delivering
+                value.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-regular fa-hourglass-half icon"></i>
+            <div>
+              <h4>Missed sales</h4>
+              <p>Delayed follow-ups and lack of timely insights result in missed sales opportunities and lower
+                conversions.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-bullhorn icon"></i>
+            <div>
+              <h4>Low ROI</h4>
+              <p>Generic, non-targeted marketing campaigns lead to poor engagement and disappointing returns.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-regular fa-face-tired icon"></i>
+            <div>
+              <h4>Low productivity</h4>
+              <p>Overwhelmed employees spend time firefighting instead of focusing on strategic tasks.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="comparison-col">
+          <h3>With Lets Viz AI + BI Solutions</h3>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-bolt icon ai"></i>
+            <div>
+              <h4>Save time</h4>
+              <p>Automating workflows reduces repetitive tasks, saving 10–20 hours weekly and boosting productivity.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-chart-line icon ai"></i>
+            <div>
+              <h4>Centralized dashboards</h4>
+              <p>Unified BI dashboards integrate finance, sales, and marketing data for smarter decisions.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-robot icon ai"></i>
+            <div>
+              <h4>AI-powered support</h4>
+              <p>24/7 chatbots and virtual assistants handle queries instantly, reducing costs and improving service.
+              </p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-handshake-simple icon ai"></i>
+            <div>
+              <h4>Smarter sales</h4>
+              <p>AI-driven lead scoring and automated follow-ups help close deals faster and more consistently.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-arrow-trend-up icon ai"></i>
+            <div>
+              <h4>Higher ROI</h4>
+              <p>Intelligent targeting and personalization deliver 20–30% better returns on marketing investment.</p>
+            </div>
+          </div>
+
+          <div class="comparison-item">
+            <i class="fa-solid fa-bullseye icon ai"></i>
+            <div>
+              <h4>Strategic focus</h4>
+              <p>Teams focus on growth initiatives while AI automates repetitive tasks for long-term scalability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="comparison-footer">
+        With Lets-Viz, your business shifts from manual, slow, and reactive to automated, fast, and data-driven —
+        setting you up for long-term growth.
+      </p>
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="main.js"></script>
+</body>
+
 </html>

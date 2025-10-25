@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -119,18 +120,40 @@ body.dark-mode .logo-dark {
   opacity: 1;
 }
 
+body.dark-mode .comparison-section {
+  /* color: var(--lv-light); */
+  background: var(--lv-dark);
+}
+
+body.dark-mode .comparison-columns {
+  background-color: var(--lv-gray);
+    box-shadow:   inset 5px 5px 15px rgba(0, 0, 0, 0.6),
+  inset -5px -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .comparison-footer {
+  color: var(--lv-gray);
+} 
+body.dark-mode .comparison-section h2 {
+  color: var(--lv-gray);
+} 
+
 
 header {
   width: 100%;
   background: var(--lv-dark);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   z-index: 100;
+  padding-top: 80px;
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10000;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  /* stays above everything */
   transition: all 0.4s ease;
   background: var(--lv-light);
 }
@@ -323,39 +346,42 @@ header {
 
 .hero-section button {
   background: var(--lv-blue);
+  border: 1px solid var(--lv-light);
+  color: var(--lv-darkblue);
   z-index: 2;
   cursor: pointer;
   margin: 20px;
   font-weight: 600;
-  color: var(--lv-light);
-  padding: 10px 30px;
+  padding: 12px 40px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 10px;
   transition: all 0.6s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-section button a {
   text-decoration: none;
-  color: var(--lv-light);
+  color: inherit;
 }
 
 .hero-section button:hover {
   background: var(--lv-hover);
-  border: 0.2px solid var(--lv-light);
   color: var(--lv-light);
-  scale: 1.02;
+  border: 1px solid var(--lv-light);
+  transform: scale(1.02);
+  box-shadow: 0 3px 6px rgba(125, 125, 125, 0.6);
 }
-
 
 .about-section {
   display: flex;
   align-items: center;
   justify-items: center;
   width: 100%;
-  min-height: 300px;
+  min-height: 500px;
   padding: 20px 10%;
   gap: 40px;
-
 }
 
 .about-left {
@@ -389,10 +415,163 @@ header {
 }
 
 
+.section-3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+  padding: 20px 10%;
+  gap: 40px;
+  color: var(--lv-light);
+  flex-direction: column;
+}
+
+.section-3 .section-3-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.3);
+  z-index: 1;
+  transition: all 0.6s ease;
+}
 
 
+.section-3:hover .section-3-img {
+  transform: scale(1.05);
+  filter: brightness(0.4);
+}
+
+.section-3 h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-3 h1,
+.section-3-main {
+  z-index: 10;
+}
+
+.section-3-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.section-3-left img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.section-3-right p {
+  font-size: 1.2rem;
+}
+
+.list-div {
+  margin: 10px 0;
+  color: var(--lv-light);
+}
+
+.list-div .list {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.list-div .list li {
+  font-size: 1rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px;
+  gap: 20px;
+}
 
 
+.comparison-section {
+  background: #fff;
+  padding: 50px 10%;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.comparison-container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.comparison-columns {
+  display: grid;
+  background-color: var(--lv-gray);
+  box-shadow:   inset 5px 5px 15px rgba(0, 0, 0, 0.15),
+  inset -5px -5px 15px rgba(0, 0, 0, 0.15),
+  1px 6px 3px rgba(0, 0, 0, 0.15);
+  padding: 20px 30px;
+  border-radius: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.comparison-col h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.comparison-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.comparison-item:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #e63946;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.icon.ai {
+  color: #00b8f0;
+}
+
+.comparison-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.comparison-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.comparison-footer {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600;
+  color: #1a1a7a;
+  max-width: 800px;
+  margin-inline: auto;
+}
 
 
 
@@ -462,35 +641,22 @@ header {
     box-shadow: 0 5px 20px rgba(255, 255, 255, 0.08);
   }
 
+
   .navbar {
-    /* flex-wrap: wrap; */
-    justify-content: space-evenly;
-  }
-
-  .menu {
-    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
-    gap: 20px;
   }
 
-  .menu li {
-    flex: 1 1 auto;
-    text-align: center;
+  .navbar ul {
+    justify-content: space-between;
+    margin: 0 20px;
   }
 
-  .contact-btn {
-    display: none;
-  }
 
-  .contact-sm {
-    display: block !important;
-  }
-
-  /* Keep dropdown hidden initially */
   .dropdown-menu {
     position: static;
-    box-shadow: none;
     background: transparent;
+    box-shadow: none;
     overflow: hidden;
     max-height: 0;
     opacity: 1;
@@ -499,20 +665,65 @@ header {
     transition: max-height 0.4s ease;
   }
 
-  /* Slide open on click */
   .dropdown.open .dropdown-menu {
     max-height: 400px;
-    /* enough space for menu items */
   }
 
   .dropdown-menu li a {
     padding: 10px 0;
+    font-size: 15px;
   }
 
   .dropdown-menu li:hover {
-    background: none;
+    background: var(--lv-blue);
     color: var(--lv-blue);
   }
+
+  .contact-sm {
+    /* display: block !important; */
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .theme-toggle {
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: var(--lv-light);
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 0;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .menu.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active .fa-bars-staggered {
+    display: none;
+  }
+
+  .menu-toggle.active .fa-xmark {
+    display: inline;
+  }
+
 
   .about-section {
     flex-direction: column-reverse;
@@ -529,6 +740,53 @@ header {
     max-width: 80%;
   }
 
+  .section-3-main {
+    flex-direction: column;
+    /* stack image and text vertically */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .section-3-right p {
+    font-size: 1.1rem;
+  }
+
+  .section-3 h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-3-left img {
+    max-width: 70%;
+  }
+
+  .comparison-section {
+    padding: 70px 8%;
+  }
+
+  .comparison-container h2 {
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+  }
+
+  .comparison-columns {
+    gap: 50px;
+  }
+
+  .comparison-col h3 {
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    font-size: 1.6rem;
+  }
+
+  .comparison-item h4 {
+    font-size: 0.95rem;
+  }
+
+  .comparison-item p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Full mobile navigation (phones) */
@@ -601,6 +859,11 @@ header {
     justify-content: center;
   }
 
+  .navbar ul {
+    justify-content: space-between;
+    margin: 0 20px;
+  }
+
 
   .dropdown-menu {
     position: static;
@@ -662,7 +925,11 @@ header {
   }
 
   .contact-sm {
-    display: block !important;
+    /* display: block !important; */
+  }
+
+  .contact-btn {
+    display: none;
   }
 
   .theme-toggle {
@@ -684,6 +951,47 @@ header {
     max-width: 80%;
   }
 
+  .section-3 {
+    padding: 40px 8%;
+    min-height: auto;
+  }
+
+  .section-3 h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-3-right p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .section-3-left img {
+    max-width: 90%;
+  }
+
+  .list-div .list li {
+    font-size: 0.95rem;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  .comparison-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .comparison-col h3 {
+    text-align: left;
+  }
+
+  .comparison-section {
+    padding: 60px 6%;
+  }
+
+  .comparison-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
 }
 
 
