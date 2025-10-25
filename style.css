@@ -42,6 +42,9 @@ body.dark-mode .navbar {
 body.dark-mode .menu li a {
   color: var(--lv-light);
 }
+body.dark-mode .menu li a:hover {
+  color: var(--lv-blue);
+}
 
 body.dark-mode .dropdown-menu {
   background: var(--lv-darkblue);
@@ -139,6 +142,18 @@ body.dark-mode .comparison-section h2 {
   color: var(--lv-gray);
 }
 
+body.dark-mode .about-left p {
+  color: var(--lv-light);
+}
+
+
+body.dark-mode .navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 1, 30, 0.8);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease-in-out;
+}
+
 
 header {
   width: 100%;
@@ -167,8 +182,8 @@ header {
 }
 
 .navbar.scrolled {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease-in-out;
 }
@@ -632,11 +647,11 @@ p {
   padding: 30px 20px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  transition: scale 0.4s ease, box-shadow 0.3s ease;
 }
 
 .use-cases .card:hover {
-  transform: translateY(-10px);
+  scale: 1.03;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -1167,4 +1182,23 @@ p {
 
 .delay-3 {
   animation-delay: 0.9s;
+}
+
+
+.hover-infinite {
+  animation: hoverInfinite 5s infinite ease-in-out;
+}
+
+@keyframes hoverInfinite {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
