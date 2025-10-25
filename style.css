@@ -127,16 +127,17 @@ body.dark-mode .comparison-section {
 
 body.dark-mode .comparison-columns {
   background-color: var(--lv-gray);
-    box-shadow:   inset 5px 5px 15px rgba(0, 0, 0, 0.6),
-  inset -5px -5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.6),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.5);
 }
 
 body.dark-mode .comparison-footer {
   color: var(--lv-gray);
-} 
+}
+
 body.dark-mode .comparison-section h2 {
   color: var(--lv-gray);
-} 
+}
 
 
 header {
@@ -512,9 +513,9 @@ header {
 .comparison-columns {
   display: grid;
   background-color: var(--lv-gray);
-  box-shadow:   inset 5px 5px 15px rgba(0, 0, 0, 0.15),
-  inset -5px -5px 15px rgba(0, 0, 0, 0.15),
-  1px 6px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.15),
+    1px 6px 3px rgba(0, 0, 0, 0.15);
   padding: 20px 30px;
   border-radius: 20px;
   grid-template-columns: 1fr 1fr;
@@ -573,7 +574,87 @@ header {
   margin-inline: auto;
 }
 
+.use-cases {
+  position: relative;
+  padding: 30px 20px;
+  text-align: center;
+}
 
+.use-cases .use-cases-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  z-index: 1;
+}
+
+.use-cases .container {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.use-cases .container h2,
+p {
+  color: var(--lv-light);
+}
+
+.use-cases .container p {
+  color: var(--lv-light);
+}
+
+.use-cases h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.use-cases .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.use-cases .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.use-cases .card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.use-cases .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+.use-cases .card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.use-cases .card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.use-cases .card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
 
 
 /* Medium screen fix (tablets and small laptops) */
@@ -787,6 +868,10 @@ header {
   .comparison-item p {
     font-size: 0.9rem;
   }
+
+  .use-cases .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Full mobile navigation (phones) */
@@ -991,6 +1076,10 @@ header {
   .comparison-container h2 {
     font-size: 1.6rem;
     margin-bottom: 40px;
+  }
+
+  .use-cases .cards {
+    grid-template-columns: 1fr;
   }
 }
 
