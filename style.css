@@ -42,6 +42,7 @@ body.dark-mode .navbar {
 body.dark-mode .menu li a {
   color: var(--lv-light);
 }
+
 body.dark-mode .menu li a:hover {
   color: var(--lv-blue);
 }
@@ -152,6 +153,24 @@ body.dark-mode .navbar.scrolled {
   background: rgba(0, 1, 30, 0.8);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease-in-out;
+}
+body.dark-mode .why-letsviz {
+  background-color: var(--lv-dark);
+}
+body.dark-mode .why-container p, h2 {
+  color: var(--lv-light);
+}
+body.dark-mode .why-container h2 {
+  color: var(--lv-blue);
+}
+body.dark-mode .why-box {
+  background: var(--lv-light);
+  border: 1px solid var(--lv-blue);
+  box-shadow: 0 2px 6px rgb(188, 188, 188);
+}
+
+body.dark-mode .why-box p{
+  color: var(--lv-text);
 }
 
 
@@ -672,6 +691,81 @@ p {
   line-height: 1.6;
 }
 
+.why-letsviz {
+  background: var(--lv-gray);
+  padding: 80px 20px;
+  color: var(--lv-text);
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-letsviz h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--lv-darkblue);
+}
+
+.why-intro {
+  max-width: 950px;
+  margin: 0 auto 60px;
+  color: var(--lv-text);
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.why-box {
+  background: var(--lv-light);
+  border: 1px solid var(--lv-gray);
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.why-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--lv-blue);
+}
+
+.why-box h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--lv-darkblue);
+}
+
+.why-box p {
+  color: var(--lv-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.why-footer {
+  margin-top: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--lv-text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
 
 /* Medium screen fix (tablets and small laptops) */
 @media (max-width: 1063px) {
@@ -888,7 +982,25 @@ p {
   .use-cases .cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-letsviz h2 {
+    font-size: 1.7rem;
+  }
+
+  .why-intro {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+
+  .why-box {
+    padding: 25px 20px;
+  }
 }
+
 
 /* Full mobile navigation (phones) */
 @media (max-width: 768px) {
@@ -1096,6 +1208,23 @@ p {
 
   .use-cases .cards {
     grid-template-columns: 1fr;
+  }
+
+   .why-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .why-letsviz {
+    padding: 60px 15px;
+  }
+
+  .why-letsviz h2 {
+    font-size: 1.6rem;
+  }
+
+  .why-intro {
+    font-size: 0.95rem;
   }
 }
 
