@@ -69,3 +69,24 @@ const observer = new IntersectionObserver(
 );
 
 animatedElements.forEach((el) => observer.observe(el));
+
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const btn = item.querySelector(".faq-question");
+  btn.addEventListener("click", () => {
+
+    faqItems.forEach((el) => {
+      if (el !== item) {
+        el.classList.remove("active");
+        el.querySelector(".faq-icon").textContent = "+";
+      }
+    });
+
+
+    item.classList.toggle("active");
+    const icon = item.querySelector(".faq-icon");
+    icon.textContent = item.classList.contains("active") ? "−" : "+";
+  });
+});

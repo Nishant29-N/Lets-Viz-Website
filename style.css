@@ -112,6 +112,10 @@ body.dark-mode .logo-light {
   display: none;
 }
 
+body.dark-mode .about-left h2 {
+  color: var(--lv-blue);
+}
+
 body.dark-mode .logo-dark {
   display: inline;
 }
@@ -154,23 +158,41 @@ body.dark-mode .navbar.scrolled {
   backdrop-filter: blur(8px);
   transition: all 0.3s ease-in-out;
 }
+
 body.dark-mode .why-letsviz {
   background-color: var(--lv-dark);
 }
-body.dark-mode .why-container p, h2 {
+
+body.dark-mode .why-container p,
+h2 {
   color: var(--lv-light);
 }
+
 body.dark-mode .why-container h2 {
   color: var(--lv-blue);
 }
+
 body.dark-mode .why-box {
   background: var(--lv-light);
   border: 1px solid var(--lv-blue);
   box-shadow: 0 2px 6px rgb(188, 188, 188);
 }
 
-body.dark-mode .why-box p{
+body.dark-mode .why-box p {
   color: var(--lv-text);
+}
+
+body.dark-mode .challenges-box ul {
+  color: var(--lv-dark);
+}
+
+body.dark-mode .challenges-section h1 {
+  color: var(--lv-blue);
+}
+
+
+body.dark-mode .faq-section h2 {
+  color: var(--lv-blue);
 }
 
 
@@ -426,6 +448,7 @@ header {
 
 .about-left h2 {
   font-size: 2.8rem;
+  color: var(--lv-darkblue);
   line-height: 1.1;
   margin-bottom: 15px;
 }
@@ -542,6 +565,7 @@ header {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 700;
+  color: var(--lv-darkblue);
   margin-bottom: 30px;
 }
 
@@ -693,7 +717,7 @@ p {
 
 .why-letsviz {
   background: var(--lv-gray);
-  padding: 80px 20px;
+  padding: 50px 20px;
   color: var(--lv-text);
 }
 
@@ -706,13 +730,13 @@ p {
 .why-letsviz h2 {
   font-size: 1.9rem;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: var(--lv-darkblue);
 }
 
 .why-intro {
   max-width: 950px;
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
   color: var(--lv-text);
   font-size: 1rem;
   line-height: 1.8;
@@ -729,7 +753,7 @@ p {
   background: var(--lv-light);
   border: 1px solid var(--lv-gray);
   border-radius: 12px;
-  padding: 30px 25px;
+  padding: 20px 25px;
   text-align: left;
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -764,6 +788,168 @@ p {
   font-size: 0.95rem;
   line-height: 1.7;
   opacity: 0.9;
+}
+
+.challenges-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 30px 50px;
+}
+
+.challenges-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.challenges-solved {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.challenges-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.challenges-box ul {
+  width: 100%;
+  max-width: 400px;
+  background: var(--lv-gray);
+  /* border: 1px solid var(--lv-text); */
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 0;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.challenges-box ul:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(125, 125, 125, 0.6);
+  border-color: var(--lv-blue);
+}
+
+.challenges-box ul li {
+  list-style: none;
+  margin: 15px 0;
+  font-size: 0.95rem;
+  color: var(--lv-text);
+  display: flex;
+  align-items: center;
+}
+
+.challenges-box ul li i {
+  color: var(--lv-blue);
+  margin-right: 10px;
+}
+
+
+/* FAQ Section */
+.faq-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--lv-darkblue);
+}
+
+
+.faq-container {
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+.faq-item {
+  border-bottom: 1px solid #e2e2e2;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* Question Button */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 25px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00b8f0;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #f9f9f9;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: #00b8f0;
+  transition: transform 0.3s, color 0.3s;
+}
+
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background-color: #fff;
+  padding: 0 25px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.faq-answer p {
+  color: var(--lv-text);
+}
+
+
+.faq-item.active {
+  background-color: #f7fbff;
+  border-left: 4px solid #00b8f0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 15px 25px 20px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: #000;
+}
+
+.faq-item.active .faq-question {
+  color: #000;
 }
 
 
@@ -999,6 +1185,39 @@ p {
   .why-box {
     padding: 25px 20px;
   }
+
+  .challenges-solved {
+    gap: 30px;
+  }
+
+  .challenges-box ul {
+    max-width: 400px;
+  }
+
+  .faq-section {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 0 15px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 16px 18px;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .faq-icon {
+    font-size: 1.4rem;
+  }
 }
 
 
@@ -1210,7 +1429,7 @@ p {
     grid-template-columns: 1fr;
   }
 
-   .why-grid {
+  .why-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
@@ -1225,6 +1444,54 @@ p {
 
   .why-intro {
     font-size: 0.95rem;
+  }
+
+
+  .challenges-solved {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .challenges-solved {
+    gap: 20px;
+  }
+
+  .challenges-box ul {
+    width: 400px;
+  }
+
+  .challenges-section {
+    padding: 30px 20px;
+  }
+
+  .challenges-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .faq-section {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 40px auto;
+  }
+
+  .faq-section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+  }
+
+  .faq-question {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    padding: 0 20px;
+    line-height: 1.7;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 15px 20px 18px;
   }
 }
 
